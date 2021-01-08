@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;900&family=Lobster&family=Merriweather:ital,wght@0,700;1,400&family=Playfair+Display&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(248, 248, 248);
+}
+
+div {
+    outline: none;
+}
+
+button {
+    padding: 0px 10px;
+    margin: 5px auto;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: gray;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.fas {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    color: black;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    height: 40px;
+    color: rgb(153, 153, 153);
+    width: 100%;
+    z-index: 1;
+    margin: auto;
+    padding: 5px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
+    align-items: center;
+}
+
+
+.menu-options {
+    display: none;
+    margin-top: 170px;
+    position: absolute;
+    overflow: auto;
+    background-color: white ;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.menu-options button {
+    margin: 10px;
+    padding: 18px;
+    color: black;
+    background: rgb(214, 225, 255);
+    cursor: pointer;
+    border-radius: 30px;
+    
+}
+
+.menu-options button:hover {
+    background: rgb(71, 71, 71);
+    color: white;
+}
+
+.b, .i, .u {
+    padding: 10px;
+    color: black;
+}
+
+
+.u {
+    text-decoration: underline;
+}
+.i {
+    font-style: italic;
+}
+
+/*STYLING FOR ALIGNMENT ICON MENU*/
+.align-icons {
+    display: none;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 50%;
+    background-color: white;
+    position: absolute;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    color: black;
+}
+
+.align-icons .fas {
+    margin: 0;
+    padding: 15px;
+    color: black;
+}
+
+.align-icons :hover {
+    background-color: rgb(209, 209, 209);
+}
+
+.align-icons button {
+    padding: 0;
+}
+
+
+.colors {
+    display: flex;
+} 
+
+.color-palletes {
+    display: none;
+    margin-top: 240px;
+    position: absolute;
+    overflow: auto;
+    background-color: white ;
+    padding: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 60%;
+    font-family: roboto;
+    border-radius: 4px;
+    width: 25%;
+    
+    
+}
+
+.color-palletes button {
+   
+    margin: 7px;
+    width: inherit;
+    height:inherit;
+}
+
+.f-color-title, .bg-title {
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+.line {
+    border-bottom: 0.5px solid rgb(218, 218, 218);
+    padding: 5px 0px;
+}
+.font-colors, .bg-colors {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+}
+
+.color-palletes button {
+    margin: 5px;
+    width: 2px;
+    height: 22px;
+    border-radius: 100%;
+    background-color: rgb(36, 36, 36);
+    cursor: pointer;
+    border: solid 1px rgb(233, 233, 233);
+    outline: none;
+}
+.color:hover {
+    border: solid 1px orange;
+}
+
+.custom-color {
+    margin: 7px 0px;
+    display: flex;
+    width: 90%;
+   
+}
+
+.custom-color input[type=text] {
+    width: 70%;
+    border: solid 0.5px rgb(182, 182, 182);
+    text-align: center;
+    padding: 2px;
+    outline: none;
+}
+
+.color-picker {
+    display: flex;
+    font-size: 14px;
+    color: black;
+    padding: 5px;
+    width: 100%;
+}
+
+.color-picker button {
+    border-radius: 0px;
+    color: black;
+    background-color: transparent; 
+    
+}
+
+.color-picker p {
+    margin-top: 5px;
+    margin-right: 3px;
+}
+.font-sizes {
+    display: none;
+    margin-top: 150px;
+    margin-left: 23%;
+    position: absolute;
+    overflow: auto;
+    background-color: white ;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 4px;
+    
+}
+
+.font-sizes button {
+    margin: 0;
+    padding: 10px 15px;
+    color: black;
+    cursor: pointer;
+}
+.font-sizes button:hover {
+    background-color: rgb(209, 209, 209);
+}
+
+
+.font-style-dropdown {
+    display: none;
+    margin-top: 260px;
+    margin-left: 10%;
+    position: absolute;
+    overflow: auto;
+    background-color: white ;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.font-style-dropdown button {
+    margin: 0;
+    padding: 10px 15px;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+}
+.font-style-dropdown button:hover {
+    background-color: rgb(209, 209, 209);
+}
+
+.show {display: block;}
+
+.editor {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 80px;
+    padding: 40px;
+    line-height: 35px;
+    background-color: white;
+}
+
+
+/* Medium devices (landscape tablets, 992px and up) */
+@media only screen and (min-width: 992px) {
+.word-processor {
+    background-color: rgb(245, 245, 245);
+}
+.editor {
+    width: 50%;
+    min-height: 700px;
+    margin: auto 285px;
+    margin-bottom: 40px;
+    margin-top: 100px;
+    padding: 80px 80px;
+    background-color: white;
+    border: solid 1px rgb(219, 219, 219);
+    box-shadow:
+  0 -3.6px 5.1px -65px rgba(0, 0, 0, 0.022),
+  0 -4.8px 12.2px -65px rgba(0, 0, 0, 0.027),
+  0 -2.7px 23px -65px rgba(0, 0, 0, 0.031),
+  0 5.1px 41.1px -65px rgba(0, 0, 0, 0.039),
+  0 24.4px 76.9px -65px rgba(0, 0, 0, 0.056),
+  0 79px 184px -65px rgba(0, 0, 0, 0.1);
+
+}
+
+.blank-header {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 0;
+    background-color: rgb(248, 248, 248);
+}
+.header {
+    width: 65%;
+    top: 30px;
+    left: 260px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.color-palletes {
+    margin-left: 80%;
+    width: 18%;
+}
+
+.menu-options {
+    width: 30%;
+}
+
+}

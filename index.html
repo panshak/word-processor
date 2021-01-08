@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400&display=swap" rel="stylesheet">
+    <title>Word Processor</title>
+</head>
+<body>
+    
+    <div class="blank-header"></div>
+    <div class="header">
+        <button onclick="options('menu')"><i class="fas fa-bars"></i></button>
+        <div id="menu" class="menu-options content">
+            <div class="menu-items" onclick="Export2Doc('exportContent');"><button>Export to Word</button></div>
+            <div class="menu-items"><button>Download App</button></div><br>
+            <p>©Panshak Solomon</p>
+            
+        </div>
+    
+        <button onclick="options('font')"><i class="fas fa-font"></i></button>
+        <div id="font" class="font-style-dropdown content">
+            <div class="font-style" ><button style="font-family:Arial;" onclick="fName('Arial')">Arial</button></div>
+            <div class="font-style" ><button style="font-family:Times New Roman;" onclick="fName('Times New Roman')">Times</button></div>
+            <div class="font-style" ><button style="font-family:Calibri;" onclick="fName('Calibri')">Calibri</button></div>
+            <div class="font-style" ><button style="font-family:Impact;" onclick="fName('Impact')">Impact</button></div>
+            <div class="font-style" ><button style="font-family:Segoe UI;" onclick="fName('Segoe UI')">Segoe UI</button></div>
+            <div class="font-style" ><button style="font-family:Roboto;" onclick="fName('Roboto')">Roboto</button></div>
+            <div class="font-style" ><button style="font-family:cinzel;" onclick="fName('cinzel')">Cinzel</button></div>
+            <div class="font-style" ><button style="font-family:pacifico;" onclick="fName('pacifico')">Pacifico</button></div>
+            <div class="font-style" ><button style="font-family:Merriweather;" onclick="fName('Merriweather')">Merriweather</button></div>
+            <div class="font-style" ><button style="font-family:Playfair Display;" onclick="fName('Playfair Display')">Playfair Display</button></div>
+            <div class="font-style" ><button style="font-family:Lobster;" onclick="fName('Lobster')">Lobster</button></div>
+            <div class="font-style" ><button style="font-family:cambria;" onclick="fName('cambria')">Cambria</button></div>
+        </div>
+
+        
+        <button class="fas b" onclick="options('size')">A<small>A</small></button>
+        <div id="size" class="font-sizes content">
+            <div class="number"><button onclick="fSize(1)">10</button></div>
+            <div class="number"><button onclick="fSize(2)">13</button></div>
+            <div class="number"><button onclick="fSize(3)">16</button></div>
+            <div class="number"><button onclick="fSize(4)">18</button></div>
+            <div class="number"><button onclick="fSize(5)">24</button></div>
+            <div class="number"><button onclick="fSize(6)">32</button></div>
+            <div class="number"><button onclick="fSize(7)">48</button></div>
+        </div>
+        
+        <button class="b" onclick="fStyle('bold')">B</button>
+        <button class="i" onclick="fStyle('italic')">I</button>
+        <button class="u" onclick="fStyle('underline')">U</button>
+        
+        <button onclick="options('align')"><i class="fas fa-align-left"></i></button>
+        <div id="align" class="align-icons content">
+            <button onclick="justify('justifyLeft')"><i class="fas fa-align-left"></i></button>
+            <button onclick="justify('justifyCenter')"><i class="fas fa-align-center"></i></button>
+            <button onclick="justify('justifyRight')"><i class="fas fa-align-right"></i></button>
+            <button onclick="justify('justifyFull')"><i class="fas fa-align-justify"></i></button>
+        </div>
+        
+
+        <button onclick="list('insertOrderedList')"> <i class="fas fa-list-ol"></i></button>
+        <button onclick="list('insertUnorderedList')"> <i class="fas fa-list-ul"></i></button>
+
+
+        <div class="colors">
+            <button class="btn" onclick="options('palletes')"><i class="fas fa-fill-drip"></i></button>
+        </div>
+
+        <div id="palletes" class="color-palletes content">
+
+            <div class="f-color-title">Font Colors</div>
+            <div class="font-colors">
+                <button class="yellow-green color" style="background:#00FF00" onclick="fColor('#00FF00')"></button>
+                <button class="green color" style="background:#007900" onclick="fColor('#007900')"></button>
+                <button class="blue-green color" style="background:#00AEAE" onclick="fColor('#00AEAE')"></button>
+                <button class="blue color" style="background:#0000FF" onclick="fColor('#0000FF')"></button>
+                <button class="blue-violet color" style="background:#7308A5" onclick="fColor('#7308A5')"></button>
+                <button class="violet color" style="background:#BA00FF" onclick="fColor('#BA00FF')"></button>
+                <button class="red-violet color" style="background:#CC00AF" onclick="fColor('#CC00AF')"></button>
+                <button class="red color" style="background:#FF0000" onclick="fColor('#FF0000')"></button>
+                <button class="red-orange color" style="background:#FF4600" onclick="fColor('#FF4600')"></button>
+                <button class="orange color" style="background:#FF7F00" onclick="fColor('#FF7F00')"></button>
+                <button class="orange-yellow color" style="background:#FEB300" onclick="fColor('#FEB300')"></button>
+                <button class="yellow color" style="background:#FFFF00" onclick="fColor('#FFFF00')"></button>
+            </div>
+            <div class="color-picker">
+                <p>Choose</p>
+                <input type="color" value="#FEB300" onchange="document.execCommand( 'foreColor', false, this.value )"; >
+            </div>
+            
+            <div class="line"></div>
+            <div class="bg-title">Background</div>
+            <div class="bg-colors">
+                <button class="yellow-green color" style="background:#00FF00" onclick="bColor('#00FF00')"></button>
+                <button class="green color" style="background:#007900" onclick="bColor('#007900')"></button>
+                <button class="blue-green color" style="background:#00AEAE" onclick="bColor('#00AEAE')"></button>
+                <button class="blue color" style="background:#0000FF" onclick="bColor('#0000FF')"></button>
+                <button class="blue-violet color" style="background:#7308A5" onclick="bColor('#7308A5')"></button>
+                <button class="violet color" style="background:#BA00FF" onclick="bColor('#BA00FF')"></button>
+                <button class="red-violet color" style="background:#CC00AF" onclick="bColor('#CC00AF')"></button>
+                <button class="red color" style="background:#FF0000" onclick="bColor('#FF0000')"></button>
+                <button class="red-orange color" style="background:#FF4600" onclick="bColor('#FF4600')"></button>
+                <button class="orange color" style="background:#FF7F00" onclick="bColor('#FF7F00')"></button>
+                <button class="orange-yellow color" style="background:#FEB300" onclick="bColor('#FEB300')"></button>
+                <button class="yellow color" style="background:#FFFF00" onclick="bColor('#FFFF00')"></button>
+            </div>
+            <div class="color-picker">
+                <p>Choose</p>
+                <input type="color" value="#FEB300" onchange="document.execCommand( 'backColor', false, this.value )"; >
+            </div>
+            
+        </div>
+        
+        
+
+    </div>
+
+<!--HEADER ENDS HERE-->
+
+
+    <div id="exportContent" class="editor" contenteditable>
+        <h1>HELLO, I'M PANSHAK</h1>
+        Just start editing.
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+    </div>
+
+    <script src="app.js" async defer></script>
+    
+</body>
+</html>
